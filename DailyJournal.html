@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:#ccffcc;
+            margin:0;
+            padding:20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align:center;
+            color:#444;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        .journal-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ccffcc;
+            padding:20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        input, texterea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #4a90e2;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #357abd;
+        }
+
+        .entry {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .entry h3 {
+            margin: 0;
+            color:#4a90e2;
+        }
+
+        .entry small {
+            color: gray;
+        }
+    </style>
+</head>
+</html>
+
+<h1> My Daily Journal</h1>
+<div id="journal-container">
+    <input type="date" id="dateInput">
+    <textarea id="entryInput" placeholder="Write about your day..." rows="6"></textarea>
+    <button onclick="saveEntry()">Save Entry</button>
+
+    <h2>Previous Entries</h2>
+    <div id="entries"></div>
+</div>
+
+<script>
+    const entryInput=document.getElementById("entryInput");
+    const dateInput=document.getElementById("dateInput");
+    const entriesDiv=document.getElementById("entries");
+
+    window.onload=loadEntries;
+
+    function saveEntry() {
+        const date= dateInput.value;
+        const text= entryInput.value.trim();
+
+        if (!date || !text) {
+            alert ("Please enter both a date and your hournal entry!");
+            return;
+        }
+
+        const entry= {date, text};
+        let allEntries= JSON.parse(localStorage.getItem("journalEntries")) || [];
+
+        allEntries.push(entry);
+        localStorage.setItem("journalEntries" , JSON.stringify(allEntries));
+
+        entryInput.value="";
+        dateInput.value="";
+        loadEntries();
+    }
+
+    function loadEntries() {
+        const allEntries=JSON.parse(localStorage.getItem("journalEntries")) || [];
+        entriesDiv.innerHTML="";
+
+        allEntries.reverse().forEach(entry=> {
+            const entryDiv = document.createElement("div");
+            entryDiv.classList.add(entry);
+            entryDiv.innerHTML;
+            entriesDiv.appendChild(entryDiv);
+
+        });
+    }
+
+    function deleteEntry(date) {
+        let allEntries=JSON.parse(localStorage.getItem("journalEntries")) || [];
+        const update= allEntries.filter(e=> edate !==date);
+        localStorage.setItem("journalEntries",JSON.stringify(updated));
+        localEntries();
+    }
+</script>
