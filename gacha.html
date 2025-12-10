@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HoneyDo Gacha</title>
+  <link rel="stylesheet" href="css/gacha.css" />
+  </head>
+<body>
+  <main id="app">
+    <header>
+      <h1>HoneyDo Gacha</h1>
+    </header>
+
+    <section class="center-box">
+      <div id="result" class="result-display">
+        <div class="result-image-wrap">
+          <img id="resultImage" src="" alt="Your prize will appear here" />
+        </div>
+        <div id="resultTitle" class="result-title">Ready to Pull!</div>
+        <div class="controls">
+          <button id="pullBtn" class="btn primary">Pull</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-section">
+      <h2>Your Collection</h2>
+      <div id="collection" class="collection"></div>
+      <button id="clearHistoryBtn" class="btn clear-btn">Clear Collection</button>
+    </section>
+
+    <footer class="notes">
+      <small>Images you pull are stored in your browser</small>
+    </footer>
+  </main>
+
+  <script src="gacha.js"></script>
+</body>
+</html>
