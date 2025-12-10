@@ -2,7 +2,7 @@
   overflow: hidden;
   background-color: #333333;
   font-family: consolas, sans-serif;
-  position: absolute;
+  position: fixed;
   top: 0;
  }
 
@@ -84,10 +84,21 @@ ul li a:hover {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 40, 23, 0.315);
-  max-width: 300px;
-  margin: auto;
+  width: 300px;
   text-align: center;
-  font-family: arial;
+  font-family: consolas, sans-serif;
+}
+
+.cards-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
 button {
