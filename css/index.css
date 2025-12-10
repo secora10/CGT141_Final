@@ -1,0 +1,86 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            background: #f7f7f3;
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            text-align: center;
+            padding: 40px;
+            max-width: 700px;
+        }
+
+        header h1 {
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            font-weight: 700; 
+            font-size: 48px;
+            letter-spacing: -1px;
+            margin-bottom: 40px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 40px;
+        }
+
+        .links a {
+            font-size: 20px;
+            color: #444;
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .links a:hover {
+            color: #000;
+            transform: translateX(6px);
+        }
+
+        footer p {
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 40, 23, 0.315);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #012b11;
+  background-color: #ccd5ae;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: rgb(12, 38, 3);
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
