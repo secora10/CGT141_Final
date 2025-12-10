@@ -6,30 +6,30 @@
     <title>Daily Journal</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background:#ccffcc;
+            font-family: Consolas;
+            background:hsl(120, 44%, 89%);
             margin:0;
             padding:20px;
-            color: #333;
+            color:rgb(116, 75, 75);
         }
 
         h1 {
             text-align:center;
-            color:#444;
+            color:rgb(116, 75, 75);
         }
 
         h1 {
             text-align: center;
-            color: #444;
+            color: rgb(116, 75, 75);
         }
 
         .journal-container {
             max-width: 700px;
             margin: 0 auto;
-            background: #ccffcc;
+            background: hsl(120, 44%, 89%);
             padding:20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgb(116, 75, 75);
         }
 
         input, texterea, button {
@@ -43,7 +43,7 @@
         }
 
         button {
-            background: #4a90e2;
+            background: rgb(116, 75, 75);
             color: white;
             font-weight: bold;
             border: none;
@@ -52,7 +52,7 @@
         }
 
         button:hover {
-            background: #357abd;
+            background: rgb(116, 75, 75);
         }
 
         .entry {
@@ -65,11 +65,11 @@
 
         .entry h3 {
             margin: 0;
-            color:#4a90e2;
+            color:rgb(116, 75, 75);
         }
 
         .entry small {
-            color: gray;
+            color: rgb(116, 75, 75);
         }
     </style>
 </head>
@@ -116,10 +116,16 @@
         const allEntries=JSON.parse(localStorage.getItem("journalEntries")) || [];
         entriesDiv.innerHTML="";
 
-        allEntries.reverse().forEach(entry=> {
+        allEntries.slice().reverse().forEach(entry=> {
             const entryDiv = document.createElement("div");
-            entryDiv.classList.add(entry);
-            entryDiv.innerHTML;
+            entryDiv.classList.add("entry");
+            entryDiv.innerHTML= `
+            <h3>${entry.date}</h3>
+            <p>${entry.text}</p>
+            `;
+
+            
+           
             entriesDiv.appendChild(entryDiv);
 
         });
