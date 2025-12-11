@@ -16,23 +16,53 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.navbar {
+    background-color: #ccd5ae;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+  }
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #012b11;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #b4c18b;
+}
+
 html, body{
-    place-items: center;
+  height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
     font-family: var(--font-family);
-    background: linear-gradient(to right, #ccd5ae, #fefae0);
+    background: #e6ecc0;
     overflow: hidden;
 }
 .container{
-    width: max-content;
-    height: max-content;
-    position: relative;
     display: flex;
-    padding: 2% 0px 0px 0px;
     justify-content: center;
-    top: 10%;
-    right: 0%;
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    position: relative;
 }
 .calendar{
     height: 610px;
