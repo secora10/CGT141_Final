@@ -1,3 +1,29 @@
+.navbar {
+    background-color: #ccd5ae;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #012b11;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #b4c18b;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -10,6 +36,34 @@ body {
     background-position: center;
     backdrop-filter: blur(2px); 
     -webkit-backdrop-filter: blur(2px);
+}
+
+.navbar {
+    background-color: #ccd5ae;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #012b11;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #b4c18b;
 }
 
 /* Timer Card Style */
