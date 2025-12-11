@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pomodoro.css">
+    <title>Focus Timer</title>
+
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Notification Message Box (replaces alert/confirm) -->
+    <div id="message-box" class="fixed top-0 left-0 right-0 p-4 text-center bg-yellow-400 text-slate-900 font-semibold z-50">
+        <!-- Message content set by script.js -->
+    </div>
+
+    <div class="timer-card w-full max-w-lg p-6 md:p-10 rounded-3xl text-white text-center transition-all duration-300">
+        <h1 class="text-3xl font-extrabold mb-6 text-indigo-400">Focus Timer</h1>
+
+        <!-- Mode Selector -->
+        <div id="mode-selector" class="flex justify-center space-x-2 p-1 bg-slate-700 rounded-xl mb-8">
+            <button id="pomodoro" class="mode-button active text-sm md:text-base px-3 py-2 rounded-lg transition-colors duration-200" onclick="switchMode('pomodoro')">Pomodoro (25)</button>
+            <button id="short-break" class="mode-button text-sm md:text-base px-3 py-2 rounded-lg transition-colors duration-200" onclick="switchMode('short-break')">Short Break (5)</button>
+            <button id="long-break" class="mode-button text-sm md:text-base px-3 py-2 rounded-lg transition-colors duration-200" onclick="switchMode('long-break')">Long Break (15)</button>
+        </div>
+
+        <!-- Time Display -->
+        <div id="time-display" class="text-7xl md:text-9xl font-extrabold mb-8 text-slate-100">
+            25:00
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <!-- Functions are globally accessible via the script.js link -->
+            <button id="start-button" onclick="startPauseTimer()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-[1.03] text-xl shadow-lg shadow-emerald-500/50">
+                START
+            </button>
+            <button id="reset-button" onclick="resetTimer()" class="bg-slate-600 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-[1.03] text-xl shadow-lg shadow-slate-600/50">
+                RESET
+            </button>
+        </div>
+
+        <p class="mt-8 text-sm text-slate-400">Session count: <span id="session-counter" class="font-semibold text-indigo-400">0</span></p>
+
+    </div>
+
+    <!-- Link the external JavaScript file -->
+    <script src="js/pomodoro.js"></script>
+</body>
+</html>
