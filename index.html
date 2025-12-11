@@ -1,52 +1,72 @@
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CALENDAR</title>
-        <link rel="stylesheet" href="css/master.css">
-        <script src="js/script.js" defer></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="calendar">
-                <div class="calendar-header">
-                    <span class="month-picker" id="month-picker"> May </span>
-                    <div class="year-picker" id="year-picker">
-                        <span class="year-change" id="pre-year">
-                            <pre>&lt;</pre>
-                        </span>
-                        <span id="year">2025 </span>
-                        <span class="year-change" id="next-year">
-                            <pre>&gt;</pre>
-                        </span>
-                    </div>
-                </div>
-                <div class="calendar-body">
-                    <div class="calendar-week-days">
-                        <div>Sun</div>
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thur</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
-                    </div>
-                    <div class="calendar-days">   
-                    </div>
-                </div>
-                <div class="calendar-footer">
-                </div>
-                <div class="date-time-formate">
-                    <div class="day-text-formate">TODAY</div>
-                    <div class="date-time-value">
-                        <div class="time-formate">02:51:20</div>
-                        <div class="date-formate">23 - july - 2022</div>
-                    </div>
-                </div>
-                <div class="month-list"></div>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>HoneyDo</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" />
+    
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="DailyJournal.html">Journal</a></li>
+            <li><a href="pomodoro.html">Pomodoro</a></li>
+            <li><a href="tasks.html">To-Do</a></li>
+            <li><a href="mood.html">Mood/About</a></li>
+            <li><a href="gacha.html">Gacha</a></li>
+        </ul>
+    </div>
+
+    <div class="banner">
+        <div class="banner-left">
+            <h1>HoneyDo</h1>
         </div>
-    </body>
+    </div>
+
+    <div class="cards-container">
+        <a href="calendar.html" class="card">
+            <img src="images/Calendar_Card.png" alt="Calendar" />
+            <h2>Calendar</h2>
+            <span class="card-btn">Go</span>
+        </a>
+
+        <a href="DailyJournal.html" class="card">
+            <img src="images/Journal2_Card.png" alt="Daily Journal" />
+            <h2>Daily Journal</h2>
+            <span class="card-btn">Go</span>
+        </a>
+
+        <a href="pomodoro.html" class="card">
+            <img src="images/Pomodoro_Card.png" alt="Pomodoro Timer" />
+            <h2>Pomodoro Timer</h2>
+            <span class="card-btn">Go</span>
+        </a>
+
+        <a href="tasks.html" class="card">
+            <img src="images/Tasks_Card.png" alt="To-Do List" />
+            <h2>To-Do List</h2>
+            <span class="card-btn">Go</span>
+        </a>
+
+        <a href="mood.html" class="card">
+            <img src="images/Mood_Card.png" alt="Mood Tracker / About Us" />
+            <h2>Mood Tracker / About Us</h2>
+            <span class="card-btn">Go</span>
+        </a>
+
+        <a href="gacha.html" class="card">
+            <img src="images/Gacha_Card.png" alt="Gacha Game" />
+            <h2>Gacha Game</h2>
+            <span class="card-btn">Go</span>
+        </a>
+    </div>
+
+</body>
 </html>
