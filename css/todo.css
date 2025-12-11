@@ -1,20 +1,21 @@
 :root {
     --gradient: linear-gradient(
         180deg,
-        #99B769 0%,
-        #C6D39E 100%
+        #ccd5ae 0%,
+        #e9edc9 100%
     );
     --dark: #1f2723;
     --grey: #b1bacb;
     --grey-border: rgba(210,210,210,0.75);
     --grey-light: #eeeeee;
     --grey-dark: #405175;
-    --blue: #90B05A;
-    --green: #FAC95B;
+    --green: #ccd5ae;
+    --orange: #faedcd;
     --white: #ffffff;
 }
 
 body {
+    font-family: consolas, sans-serif;
     background: var(--gradient);
     margin: 0;
     height: 100vh;
@@ -25,11 +26,12 @@ body {
 }
 
 .btn {
+    font-family: consolas, sans-serif;
     color: var(--white);
     font-size: 1.1rem;
     padding: 0.7rem 1.5rem;
     border-radius: 0.3rem;
-    background-color: var(--blue);
+    background-color: #d4a373;
     border: none;
     position: absolute;
     right: 0.5rem;
@@ -49,6 +51,7 @@ p {
 /* Todo Container */
 
 .todo {
+    font-family: consolas, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -74,14 +77,15 @@ h2 {
 }
 
 .input-field {
+    font-family: consolas, sans-serif;
     width: 100%;
-    border: 0.06rem solid #d2d2d2bf;
+    border: 0.06rem solid #625d5dbf;
     border-radius: 0.5rem;
     padding: 1.25rem;
     font-size: 1rem;
 }
 
-imput[type="text"]::placeholder {
+imput[type="text"]::placeholder {  
     color: var(--grey);
 }
 
@@ -111,7 +115,7 @@ li {
 }
 
 #todoList .disabled {
-    color: #8f98a8;
+    color: #919bae;
 }
 
 .disabled {
@@ -133,15 +137,15 @@ input[type="checkbox"]::before {
     height: 2rem;
     font-size: 1.7rem;
     text-align: center;
-    border: 0.06rem solid var(--grey-border);
+    border: 0.06rem solid var(--grey-light);
     border-radius: 50%;
     color: transparent;
 }
 
 input[type="checkbox"]:checked::before {
     color: var(--white);
-    background-color: var(--green);
-    border: 0.06rem solid var(--green);
+    background-color: var(--orange);
+    border: 0.06rem solid var(--orange);
     border-radius: 50%;
 }
 
@@ -153,7 +157,7 @@ input[type="checkbox"]:checked::before {
     height: 2rem;
     display: flex;
     justify-content: space-between;
-    color: var (--grey);
+    color: var (var(--grey-light));
 }
 
 .counter-containter p {
@@ -161,6 +165,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .counter-coantiner button {
+    font-family: consolas, sans-serif;
     border: none;
     background-color: transparent;
     color: var(--grey);
@@ -169,24 +174,10 @@ input[type="checkbox"]:checked::before {
 
 .footer {
     display: flex;
-    gap: 1.8rem;
-    background-color: var(--white);
+    gap: 0.3rem;
+    background-color: #ccd5ae;
     padding: 1.2rem;
     border-radius: 0.5rem;
-}
-
-.made-by, 
-.author {
-    font-size: 0.9rem;
-}
-
-.made-by {
-    color: var(--grey-dark);
-}
-
-.author {
-    color: var(--blue);
-    font-weight: bold;
 }
 
 .scroll {
@@ -199,7 +190,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .scroll::-webkit-scrollbar-thumb {
-    background-color: var(--blue);
+    background-color: var(--green);
     border-radius: 0.5rem;
 }
 
