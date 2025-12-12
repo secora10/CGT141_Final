@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daily Habit Tracker</title>
+
+  <link rel="stylesheet" href="mood.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Daily Habit Tracker</h1>
+
+    <div class="top-grid">
+      <div class="panel">
+        <label>Choose up to 3 habits to track</label>
+
+        <div id="habitSelectors">
+          <select id="habitDropdown1"></select>
+          <input id="custom1" class="custom-input" placeholder="Type your custom habit" />
+
+          <select id="habitDropdown2" style="margin-top:10px"></select>
+          <input id="custom2" class="custom-input" placeholder="Type your custom habit" />
+
+          <select id="habitDropdown3" style="margin-top:10px"></select>
+          <input id="custom3" class="custom-input" placeholder="Type your custom habit" />
+        </div>
+
+        <button id="saveHabitsBtn" type="button" style="margin-top:12px">
+          Save today’s selection
+        </button>
+
+        <div class="habit-list" id="habitList"></div>
+
+        <div class="progress" id="progressBar" aria-live="polite">
+          Progress: 0 / 0 habits completed
+        </div>
+      </div>
+
+      <div class="panel">
+        <button id="resetBtn" type="button" class="reset-btn">
+          Reset Data
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="mood.js"></script>
+</body>
+</html>
