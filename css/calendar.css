@@ -75,8 +75,8 @@ html, body{
   height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically */
+    justify-content: center;
+    align-items: center;  
     font-family: var(--font-family);
     background: #e6ecc0;
     overflow: hidden;
